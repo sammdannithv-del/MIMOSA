@@ -1,12 +1,401 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MIMOSA</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mimosa — sírvete un look</title>
+<meta name="description" content="Mimosa — moda femenina que llega directo a tu WhatsApp. Vestidos, blusas, faldas y accesorios con actitud.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Fraunces:ital,wght@0,500;0,600;1,500;1,600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+
+<!-- sprites SVG reutilizables -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="mflower" viewBox="-10 -10 20 20">
+    <g fill="currentColor">
+      <circle cx="0" cy="-6" r="4.4"/><circle cx="5.6" cy="-2" r="4.4"/>
+      <circle cx="3.4" cy="5" r="4.4"/><circle cx="-3.4" cy="5" r="4.4"/>
+      <circle cx="-5.6" cy="-2" r="4.4"/><circle cx="0" cy="0" r="2.6" fill="#fff" fill-opacity=".55"/>
+    </g>
+  </symbol>
+  <symbol id="ic-bag" viewBox="0 0 24 24"><path d="M6 8h12l-1 12.5a1.5 1.5 0 0 1-1.5 1.5h-7A1.5 1.5 0 0 1 7 20.5L6 8Z" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8" fill="none" stroke="currentColor" stroke-width="1.7"/></symbol>
+  <symbol id="ic-heart" viewBox="0 0 24 24"><path d="M20.8 8.6c0 4.4-8.8 10-8.8 10s-8.8-5.6-8.8-10a4.6 4.6 0 0 1 8.8-1.9A4.6 4.6 0 0 1 20.8 8.6Z" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+  <symbol id="ic-check" viewBox="0 0 24 24"><path d="M5 12.5 10 17l9-10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="ic-wa" viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.8 14.3c-.24.68-1.4 1.3-1.94 1.38-.5.08-1.12.11-1.8-.11a12.9 12.9 0 0 1-1.7-.63 11.2 11.2 0 0 1-4.3-3.8 5 5 0 0 1-1.06-2.65c0-.83.44-1.24.6-1.4.15-.16.34-.2.45-.2h.34c.11 0 .27-.04.42.32l.62 1.5c.05.11.08.24.02.38-.06.14-.1.23-.2.36l-.3.35c-.1.11-.2.23-.09.44.11.2.5.83 1.08 1.35.74.66 1.36.87 1.57.97.21.1.33.08.46-.05l.5-.58c.17-.2.32-.17.53-.1l1.42.67c.2.1.34.15.39.24.05.1.05.55-.19 1.02Z" fill="currentColor"/></symbol>
+</svg>
+
+<header>
+  <div class="wrap nav">
+    <a href="#inicio" class="logo-wrap" aria-label="Ir al inicio">
+      <span class="word-mimosa">mimosa</span>
+      <svg class="logo-confetti c1" viewBox="0 0 20 20"><use href="#mflower" fill="var(--gold)"/></svg>
+      <svg class="logo-confetti c2" viewBox="0 0 20 20"><use href="#mflower" fill="var(--rose)"/></svg>
+    </a>
+
+    <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#catalogo">Catálogo</a></li>
+      <li><a href="#antojo">Antojo de la semana</a></li>
+      <li><a href="#nosotras">Nosotras</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+
+    <div class="nav-right">
+      <a class="icon-btn" href="https://wa.me/51900000000?text=Hola%2C%20quiero%20ver%20el%20cat%C3%A1logo%20completo" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
+        <svg viewBox="0 0 24 24"><use href="#ic-wa"/></svg>
+      </a>
+      <label for="menu-toggle" class="menu-btn" aria-label="Abrir menú">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </label>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    <svg class="petal-field" viewBox="0 0 1160 500" preserveAspectRatio="none" aria-hidden="true">
+      <use href="#mflower" x="90" y="60" fill="var(--rose-soft)" transform="scale(2.4)"/>
+      <use href="#mflower" x="980" y="380" fill="var(--gold-soft)" transform="scale(3)"/>
+      <use href="#mflower" x="1040" y="90" fill="var(--rose-soft)" transform="scale(1.6)"/>
+    </svg>
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow"><svg viewBox="0 0 24 24"><use href="#mflower" fill="var(--rose-deep)"/></svg>Moda femenina, directo a tu WhatsApp</div>
+        <h1>Viste tu mejor versión, sin salir de casa</h1>
+        <p class="lede">Prendas seleccionadas con buen ojo, precios justos y pedidos tan fáciles como mandar un mensaje. Así de simple es comprar en Mimosa.</p>
+        <div class="cta-row">
+          <a class="btn btn-dark" href="#catalogo">Ver catálogo</a>
+          <a class="btn btn-wa" href="https://wa.me/51900000000?text=Hola%2C%20quiero%20ver%20el%20cat%C3%A1logo%20completo" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="16" height="16"><use href="#ic-wa"/></svg>Escríbenos
+          </a>
+        </div>
+        <ul class="trust-list">
+          <li><svg class="flower-bullet" width="14" height="14" viewBox="0 0 20 20"><use href="#mflower" fill="var(--gold-deep)"/></svg>Piezas nuevas cada semana</li>
+          <li><svg class="flower-bullet" width="14" height="14" viewBox="0 0 20 20"><use href="#mflower" fill="var(--gold-deep)"/></svg>Coordinación fácil de entrega</li>
+          <li><svg class="flower-bullet" width="14" height="14" viewBox="0 0 20 20"><use href="#mflower" fill="var(--gold-deep)"/></svg>Atención personalizada por WhatsApp</li>
+        </ul>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-card">
+          <svg viewBox="0 0 260 320" class="hero-doll" aria-hidden="true">
+            <circle cx="130" cy="160" r="140" fill="var(--rose-soft)"/>
+            <path d="M92 118 Q78 168 84 210 Q70 250 62 288 L198 288 Q190 250 176 210 Q182 168 168 118 Z" fill="var(--ciruela)"/>
+            <rect x="118" y="98" width="24" height="20" rx="8" fill="var(--skin)"/>
+            <ellipse cx="130" cy="66" rx="44" ry="48" fill="var(--rose-deep)"/>
+            <circle cx="130" cy="74" r="31" fill="var(--skin)"/>
+            <path d="M96 66 Q130 32 164 66 Q162 48 130 44 Q98 48 96 66 Z" fill="var(--rose-deep)"/>
+            <circle cx="118" cy="76" r="3.4" fill="var(--ciruela)"/><circle cx="142" cy="76" r="3.4" fill="var(--ciruela)"/>
+            <path d="M118 88 Q130 96 142 88" stroke="var(--ciruela)" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+            <path d="M110 112 q20 12 40 0 q-8 10 -20 10 q-12 0 -20 -10Z" fill="var(--gold)"/>
+          </svg>
+          <div class="sticker sticker-1"><svg viewBox="-10 -10 20 20" width="15" height="15"><use href="#mflower" fill="var(--gold-deep)"/></svg>Antojo de la semana</div>
+          <div class="sticker sticker-2"><svg viewBox="0 0 24 24" width="15" height="15"><use href="#ic-heart" stroke="var(--rose-deep)"/></svg>+120 mimosas contentas</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATÁLOGO -->
+  <section id="catalogo">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <h2>Catálogo</h2>
+          <p>Una selección curada, agrupada para que encuentres tu próximo look en segundos.</p>
+        </div>
+      </div>
+
+      <div class="tiktok-note">
+        <svg viewBox="0 0 24 24"><use href="#mflower" fill="var(--rose-deep)"/></svg>
+        <p><strong>¿Cómo comprar?</strong> Elige la prenda que te gusta y toca "Pedir por WhatsApp": el mensaje ya sale armado con el nombre y precio, solo confirmas talla y listo.</p>
+      </div>
+
+      <!-- VESTIDOS -->
+      <h3 class="cat-title">Vestidos</h3>
+      <div class="grid">
+        <article class="card">
+          <div class="card-media" style="background:linear-gradient(150deg,var(--rose-soft),var(--rose))">
+            <span class="tag tag-new">Nuevo</span>
+            <svg viewBox="0 0 24 24"><use href="#ic-bag"/></svg>
+          </div>
+          <div class="card-info">
+            <div class="cat">Vestidos</div>
+            <div class="name">Vestido corset lencero</div>
+            <div class="price">S/ 75</div>
+            <a class="btn btn-wa btn-sm" href="https://wa.me/51972053476?text=Hola%2C%20quiero%20pedir%3A%20Vestido%20corset%20lencero%20-%20S%2F%2075" target="_blank" rel="noopener">Pedir por WhatsApp</a>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-media" style="background:linear-gradient(150deg,var(--gold-soft),var(--gold))">
+            <svg viewBox="0 0 24 24"><use href="#ic-bag"/></svg>
+          </div>
+          <div class="card-info">
+            <div class="cat">Vestidos</div>
+            <div class="name">Vestido midi satinado</div>
+            <div class="price">S/ 69</div>
+            <a class="btn btn-wa btn-sm" href="https://wa.me/51972053476?text=Hola%2C%20quiero%20pedir%3A%20Vestido%20midi%20satinado%20-%20S%2F%2069" target="_blank" rel="noopener">Pedir por WhatsApp</a>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-media" style="background:linear-gradient(150deg,var(--ciruela),var(--rose-deep))">
+            <span class="tag tag-off">-15%</span>
+            <svg viewBox="0 0 24 24"><use href="#ic-bag"/></svg>
+          </div>
+          <div class="card-info">
+            <div class="cat">Vestidos</div>
+            <div class="name">Vestido de tiras cruzadas</div>
+            <div class="price">S/ 59</div>
+            <a class="btn btn-wa btn-sm" href="https://wa.me/51972053476?text=Hola%2C%20quiero%20pedir%3A%20Vestido%20de%20tiras%20cruzadas%20-%20S%2F%2059" target="_blank" rel="noopener">Pedir por WhatsApp</a>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-media" style="background:linear-gradient(150deg,var(--rose-soft),var(--gold))">
+            <svg viewBox="0 0 24 24"><use href="#ic-bag"/></svg>
+          </div>
+          <div class="card-info">
+            <div class="cat">Vestidos</div>
+            <div class="name">Vestido plisado floreado</div>
+            <div class="price">S/ 65</div>
+            <a class="btn btn-wa btn-sm" href="https://wa.me/51972053476?text=Hola%2C%20quiero%20pedir%3A%20Vestido%20plisado%20floreado%20-%20S%2F%2065" target="_blank" rel="noopener">Pedir por WhatsApp</a>
+          </div>
+        </article>
+      </div>
+
+      <!-- BLUSAS Y FALDAS -->
+      <h3 class="cat-title">Blusas &amp; faldas</h3>
+      <div class="grid">
+        <article class="card">
+          <div class="card-media" style="background:linear-gradient(150deg,var(--gold-soft),var(--rose-soft))">
+            <span class="tag tag-new">Nuevo</span>
+            <svg viewBox="0 0 24 24"><use href="#ic-bag"/></svg>
+          </div>
+          <div class="card-info">
+            <div class="cat">Blusas</div>
+            <div class="name">Blusa lazo manga globo</div>
+            <div class="price">S/ 45</div>
+            <a class="btn btn-wa btn-sm" href="https://wa.me/51972053476?text=Hola%2C%20quiero%20pedir%3A%20Blusa%20lazo%20manga%20globo%20-%20S%2F%2045" target="_blank" rel="noopener">Pedir por WhatsApp</a>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-media" style="background:linear-gradient(150deg,var(--rose),var(--ciruela))">
+            <svg viewBox="0 0 24 24"><use href="#ic-bag"/></svg>
+          </div>
+          <div class="card-info">
+            <div class="cat">Faldas</div>
+            <div class="name">Falda plisada midi</div>
+            <div class="price">S/ 49</div>
+            <a class="btn btn-wa btn-sm" href="https://wa.me/51972053476?text=Hola%2C%20quiero%20pedir%3A%20Falda%20plisada%20midi%20-%20S%2F%2049" target="_blank" rel="noopener">Pedir por WhatsApp</a>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-media" style="background:linear-gradient(150deg,var(--gold),var(--gold-deep))">
+            <svg viewBox="0 0 24 24"><use href="#ic-bag"/></svg>
+          </div>
+          <div class="card-info">
+            <div class="cat">Faldas</div>
+            <div class="name">Falda cargo satinada</div>
+            <div class="price">S/ 49</div>
+            <a class="btn btn-wa btn-sm" href="https://wa.me/51972053476?text=Hola%2C%20quiero%20pedir%3A%20Falda%20cargo%20satinada%20-%20S%2F%2049" target="_blank" rel="noopener">Pedir por WhatsApp</a>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-media" style="background:linear-gradient(150deg,var(--rose-soft),var(--ciruela))">
+            <span class="tag tag-off">-10%</span>
+            <svg viewBox="0 0 24 24"><use href="#ic-bag"/></svg>
+          </div>
+          <div class="card-info">
+            <div class="cat">Blusas</div>
+            <div class="name">Top strapless coquette</div>
+            <div class="price">S/ 39</div>
+            <a class="btn btn-wa btn-sm" href="https://wa.me/51972053476?text=Hola%2C%20quiero%20pedir%3A%20Top%20strapless%20coquette%20-%20S%2F%2039" target="_blank" rel="noopener">Pedir por WhatsApp</a>
+          </div>
+        </article>
+      </div>
+
+      <!-- ACCESORIOS -->
+      <h3 class="cat-title">Accesorios</h3>
+      <div class="grid">
+        <article class="card">
+          <div class="card-media" style="background:linear-gradient(150deg,var(--gold-soft),var(--gold))">
+            <svg viewBox="0 0 24 24"><use href="#ic-bag"/></svg>
+          </div>
+          <div class="card-info">
+            <div class="cat">Accesorios</div>
+            <div class="name">Lazo dorado para cabello</div>
+            <div class="price">S/ 15</div>
+            <a class="btn btn-wa btn-sm" href="https://wa.me/51972053476?text=Hola%2C%20quiero%20pedir%3A%20Lazo%20dorado%20para%20cabello%20-%20S%2F%2015" target="_blank" rel="noopener">Pedir por WhatsApp</a>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-media" style="background:linear-gradient(150deg,var(--rose-soft),var(--rose))">
+            <svg viewBox="0 0 24 24"><use href="#ic-bag"/></svg>
+          </div>
+          <div class="card-info">
+            <div class="cat">Accesorios</div>
+            <div class="name">Prendedor flor mimosa</div>
+            <div class="price">S/ 12</div>
+            <a class="btn btn-wa btn-sm" href="https://wa.me/51972053476?text=Hola%2C%20quiero%20pedir%3A%20Prendedor%20flor%20mimosa%20-%20S%2F%2012" target="_blank" rel="noopener">Pedir por WhatsApp</a>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-media" style="background:linear-gradient(150deg,var(--ciruela),var(--ciruela-2))">
+            <svg viewBox="0 0 24 24"><use href="#ic-bag"/></svg>
+          </div>
+          <div class="card-info">
+            <div class="cat">Accesorios</div>
+            <div class="name">Cinturón charol</div>
+            <div class="price">S/ 19</div>
+            <a class="btn btn-wa btn-sm" href="https://wa.me/51972053476?text=Hola%2C%20quiero%20pedir%3A%20Cintur%C3%B3n%20charol%20-%20S%2F%2019" target="_blank" rel="noopener">Pedir por WhatsApp</a>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card-media" style="background:linear-gradient(150deg,var(--gold),var(--rose))">
+            <svg viewBox="0 0 24 24"><use href="#ic-bag"/></svg>
+          </div>
+          <div class="card-info">
+            <div class="cat">Accesorios</div>
+            <div class="name">Cartera mini charol</div>
+            <div class="price">S/ 29</div>
+            <a class="btn btn-wa btn-sm" href="https://wa.me/51972053476?text=Hola%2C%20quiero%20pedir%3A%20Cartera%20mini%20charol%20-%20S%2F%2029" target="_blank" rel="noopener">Pedir por WhatsApp</a>
+          </div>
+        </article>
+      </div>
+
+      <p class="placeholder-note"><svg viewBox="0 0 24 24"><use href="#mflower" fill="var(--gold-deep)"/></svg>Reemplaza los fondos de color por fotos reales de cada prenda cuando las tengas listas.</p>
+    </div>
+  </section>
+
+  <!-- ANTOJO DE LA SEMANA -->
+  <section id="antojo">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <h2>Antojo de la semana</h2>
+          <p>La pieza más pedida de estos días, a un precio que no vas a querer dejar pasar.</p>
+        </div>
+      </div>
+      <div class="antojo-card">
+        <div class="antojo-media">
+          <span class="antojo-flag">Antojo</span>
+          <svg viewBox="0 0 24 24"><use href="#ic-bag"/></svg>
+        </div>
+        <div class="antojo-body">
+          <div class="cat">Vestidos</div>
+          <h3>Vestido corset lencero</h3>
+          <div class="price">S/ 75</div>
+          <p>Silueta entallada, tela con caída suave y detalle de encaje. Perfecto para una salida nocturna o para sentirte como la protagonista de tu propia historia.</p>
+          <a class="btn btn-wa" href="https://wa.me/51972053476?text=Hola%2C%20quiero%20pedir%20el%20antojo%20de%20la%20semana%3A%20Vestido%20corset%20lencero%2C%20S%2F%2075" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="16" height="16"><use href="#ic-wa"/></svg>Pedir este antojo
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NOSOTRAS / POR QUÉ ELEGIRNOS -->
+  <section id="nosotras">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <h2>Por qué comprar en Mimosa</h2>
+          <p>Nos importa que cada compra se sienta fácil, cercana y sin sorpresas.</p>
+        </div>
+      </div>
+      <div class="mercado-grid">
+        <div class="mercado-card">
+          <h3>Comprar en Mimosa</h3>
+          <ul>
+            <li><svg viewBox="0 0 24 24"><use href="#ic-check"/></svg>Atención directa por WhatsApp, sin formularios eternos</li>
+            <li><svg viewBox="0 0 24 24"><use href="#ic-check"/></svg>Piezas curadas a mano, no todo el catálogo genérico</li>
+            <li><svg viewBox="0 0 24 24"><use href="#ic-check"/></svg>Coordinación de entrega flexible</li>
+            <li><svg viewBox="0 0 24 24"><use href="#ic-check"/></svg>Novedades cada semana, sin quedarte con lo mismo de siempre</li>
+          </ul>
+        </div>
+        <div class="mercado-card">
+          <h3>Comprar en otro lado</h3>
+          <ul>
+            <li><svg viewBox="0 0 24 24"><use href="#ic-check"/></svg>Catálogos enormes sin curaduría</li>
+            <li><svg viewBox="0 0 24 24"><use href="#ic-check"/></svg>Atención lenta o automatizada</li>
+            <li><svg viewBox="0 0 24 24"><use href="#ic-check"/></svg>Tiempos de entrega poco claros</li>
+            <li><svg viewBox="0 0 24 24"><use href="#ic-check"/></svg>Cero cercanía con quien te vende</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIOS -->
+  <section id="testimonios">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <h2 class="mimosas-title">Mimosas felices</h2>
+          <p class="mimosas-intro">Lo que dicen las clientas que ya se animaron a pedir su primer look.</p>
+        </div>
+      </div>
+      <div class="testi-row">
+        <div class="testi">
+          <div class="avatar"><svg viewBox="0 0 24 24"><use href="#ic-heart"/></svg></div>
+          <p>"Pedí mi vestido un jueves y el sábado ya lo tenía puesto. Todo súper claro por WhatsApp."</p>
+          <div class="who">— Valeria R.</div>
+        </div>
+        <div class="testi">
+          <div class="avatar"><svg viewBox="0 0 24 24"><use href="#ic-heart"/></svg></div>
+          <p>"Me encanta que no es la típica tienda con miles de productos iguales. Cada pieza se siente elegida."</p>
+          <div class="who">— Camila S.</div>
+        </div>
+        <div class="testi">
+          <div class="avatar"><svg viewBox="0 0 24 24"><use href="#ic-heart"/></svg></div>
+          <p>"La blusa quedó igualita a la foto y me ayudaron a elegir la talla. Ya voy por mi tercer pedido."</p>
+          <div class="who">— Antuané P.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section id="contacto">
+    <div class="wrap">
+      <div class="cta-band">
+        <div>
+          <h2>¿Lista para tu próximo look?</h2>
+          <p>Escríbenos por WhatsApp y armamos tu pedido en minutos.</p>
+        </div>
+        <div class="actions">
+          <a class="btn btn-wa" href="https://wa.me/51972053476?text=Hola%2C%20quiero%20ver%20el%20cat%C3%A1logo%20completo" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="16" height="16"><use href="#ic-wa"/></svg>Escríbenos por WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="foot-quote">"Vestirte como te sientes por dentro es el primer paso para brillar por fuera."</p>
+    <div class="foot-grid">
+      <div>
+        <span class="foot-logo word-mimosa">mimosa</span>
+        <p class="foot-copy">© 2026 Mimosa. Todos los derechos reservados.</p>
+      </div>
+      <div class="foot-social">
+        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg></a>
+        <a href="#" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 4v9.5a3.5 3.5 0 1 1-3.5-3.5"/><path d="M14 4c.5 2.2 2 3.6 4 4"/></svg></a>
+        <a href="https://wa.me/51972053476" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><use href="#ic-wa"/></svg></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
 </body>
 </html>
